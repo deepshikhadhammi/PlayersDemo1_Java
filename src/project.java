@@ -48,4 +48,29 @@ public class project {
         return map;
 
     }
+
+    public static HashMap<String, Integer> addPlayersPosition(ArrayList name) {
+        System.out.println("Player is either a batsman or a bowler");
+        HashMap<String, Integer> map = new HashMap<String, Integer>();
+        for (Object player : name) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter " + player + " position");
+            int position = sc.nextInt();
+            map.put((String) player, position);
+        }
+        return map;
+
+    }
+
+    public static HashMap<String, Integer> addPlayersWeight(ArrayList name) {
+
+        HashMap<String, Integer> map = new HashMap<String, Integer>();
+        for (Object player : name) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter " + player + " " + "Weight");
+            int weight = sc.nextInt();
+            map.put((String) player, weight);
+        }
+        return map;
+    }
 }
