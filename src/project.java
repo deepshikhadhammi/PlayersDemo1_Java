@@ -106,6 +106,32 @@ public class project {
         }
         return map;
     }
+    public static ArrayList addPlayersHighestRuns(ArrayList name){
+        HashMap<String,Integer> map=new HashMap<String,Integer>();
+        ArrayList<Integer> list;
+        list=new ArrayList<Integer>();
+        ArrayList<String> highest;
+        highest = new ArrayList<String>();
+        for(Object player:name)
+        {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter "+player+" highestRuns");
+            int highestRuns= sc.nextInt();
+            list.add(highestRuns);
+            Collections.sort(list);
+            map.put((String) player,highestRuns);
+        }
+        Set key_set=map.keySet();
+        for(Object key:key_set) {
+
+            if (map.get(key).equals(list.get(10)) || map.get(key).equals( list.get(9)) || map.get(key).equals(list.get(8))) {
+                String key_1=(String)key;
+                highest.add(key_1);
+            }
+        }
+
+        return highest;
+    }
     public static HashMap<String, Integer> addPlayersAwards(ArrayList name){
         HashMap<String,Integer> map=new HashMap<String,Integer>();
         for(Object player:name)
