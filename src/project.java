@@ -95,4 +95,15 @@ public class project {
         }
         return map;
     }
+    public static HashMap<String, Integer> addPlayersCatches(ArrayList name){
+        HashMap<String,Integer> map=new HashMap<String,Integer>();
+        for(Object player:name)
+        {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter "+player+" catches");
+            int catches= sc.nextInt();
+            map.put((String) player,catches);
+        }
+        return map;
+    }
 }
