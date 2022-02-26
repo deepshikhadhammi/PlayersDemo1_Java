@@ -73,4 +73,26 @@ public class project {
         }
         return map;
     }
+    public static HashMap<String, Integer> addPlayersSixes(ArrayList name){
+        HashMap<String,Integer> map=new HashMap<String,Integer>();
+        for(Object player:name)
+        {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter "+player+" age");
+            int sixes= sc.nextInt();
+            map.put((String) player,sixes);
+        }
+        return map;
+    }
+    public static HashMap<String, Integer> addPlayersWickets(ArrayList name) {
+
+        HashMap<String, Integer> map = new HashMap<String, Integer>();
+        for (Object player : name) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Enter " + player + " " + "Wickets");
+            int wickets = sc.nextInt();
+            map.put((String) player, wickets);
+        }
+        return map;
+    }
 }
