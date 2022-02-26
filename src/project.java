@@ -139,4 +139,16 @@ public class project {
         }
         return map;
     }
+    public static HashMap<String, Integer> addPlayersWicketHaul(ArrayList name){
+        HashMap<String,Integer> map=new HashMap<String,Integer>();
+        for(Object player:name)
+        {
+
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter "+player+" WicketHaul");
+            int WicketHaul= sc.nextInt();
+            map.put((String) player,WicketHaul);
+        }
+        return map;
+    }
 }
