@@ -106,4 +106,37 @@ public class project {
         }
         return map;
     }
+    public static HashMap<String, Integer> addPlayersAwards(ArrayList name){
+        HashMap<String,Integer> map=new HashMap<String,Integer>();
+        for(Object player:name)
+        {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter "+player+" Awards");
+            int Awards= sc.nextInt();
+            map.put((String) player,Awards);
+        }
+        return map;
+    }
+    public static HashMap<String, Integer> addPlayersPracticeHours(ArrayList name){
+        HashMap<String,Integer> map=new HashMap<String,Integer>();
+        for(Object player:name)
+        {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter "+player+" practiceHours");
+            int practiceHours= sc.nextInt();
+            map.put((String) player,practiceHours);
+        }
+        return map;
+    }
+    public static HashMap<String, Integer> addPlayersCenturies(ArrayList name){
+        HashMap<String,Integer> map=new HashMap<String,Integer>();
+        for(Object player:name)
+        {
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Enter "+player+" Centuries");
+            int centuries= sc.nextInt();
+            map.put((String) player,centuries);
+        }
+        return map;
+    }
 }
