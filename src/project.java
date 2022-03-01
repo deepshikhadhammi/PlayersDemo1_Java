@@ -203,7 +203,8 @@ public class project {
             {
 
                 String key_1 = (String) key;
-                top_wicket_takers.set(0,key_1);   // replaces the word "first" in arraylist with the name of first player in an arraylist at index 0
+                if(!top_wicket_takers.contains(key_1)&&top_wicket_takers.contains("first")){
+                    top_wicket_takers.set(0,key_1);  } // replaces the word "first" in arraylist with the name of first player in an arraylist at index 0
 
 
             }
@@ -211,14 +212,16 @@ public class project {
             {
 
                 String key_1 = (String) key;
-                top_wicket_takers.set(1,key_1);//replaces the word "second" in arraylist with the name of second player in an arra
+                if(!top_wicket_takers.contains(key_1)&&top_wicket_takers.contains("second")){
+                    top_wicket_takers.set(1,key_1);}//replaces the word "second" in arraylist with the name of second player in an arra
 
             }
 
             if (map.get(key).equals(wicket_list.get(8)))//search for the third player
             {
                 String key_1 = (String) key;
-                top_wicket_takers.set(2,key_1); //replaces the word "third" in arrayList with the name of third player
+                if(!top_wicket_takers.contains(key_1)&&top_wicket_takers.contains("third")){
+                    top_wicket_takers.set(2,key_1);} //replaces the word "third" in arrayList with the name of third player
             }
         }
 
@@ -296,21 +299,23 @@ public class project {
             {
 
                 String key_1 = (String) key;
-
-                top_run_scorers.set(0,key_1); //replace the word "first" in an arraylist with the name of first player
+                if(!top_run_scorers.contains(key_1)&&top_run_scorers.contains("first")){
+                    top_run_scorers.set(0,key_1);} //replace the word "first" in an arraylist with the name of first player
 
             }
             if (map.get(key).equals(highest_run_list.get(9))) {// search for second player
 
                 String key_1 = (String) key;
-                top_run_scorers.set(1,key_1);  //replace the word"second" in an arrayList with the name of second player
+                if(!top_run_scorers.contains(key_1)&&top_run_scorers.contains("second")){
+                    top_run_scorers.set(1,key_1);}  //replace the word"second" in an arrayList with the name of second player
 
             }
 
             if (map.get(key).equals(highest_run_list.get(8)))  //search for third player
             {
                 String key_1 = (String) key;
-                top_run_scorers.set(2,key_1);   //replace the word"third" in an arraylist with the name of the third player
+                if(!top_run_scorers.contains(key_1)&&top_run_scorers.contains("third")){
+                    top_run_scorers.set(2,key_1);}   //replace the word"third" in an arraylist with the name of the third player
             }
         }
 
@@ -351,12 +356,12 @@ public class project {
 
         HashMap<String, Object> map = new HashMap<String, Object>();
         ArrayList<String> top_award_winners= new ArrayList<String>();
-        //initialising arraylisung with default values
+        //initialising arraylist using with default values
         top_award_winners.add(0,"first");
         top_award_winners.add(1,"second");
         top_award_winners.add(2,"third");
 
-        for (int i=0;i<name.size();i++ )   //link name with aawards in a hashmap
+        for (int i=0;i<name.size();i++ )   //link name with awards in a hashmap
         {
             map.put((String) name.get(i), award_list.get(i));}
 
@@ -370,7 +375,8 @@ public class project {
             {
 
                 String key_1 = (String) key;
-                top_award_winners.set(0,key_1);  //replace the word "first" in an arraylist with the name of first player
+                if(!top_award_winners.contains(key_1)&&top_award_winners.contains("first")){
+                    top_award_winners.set(0,key_1); } //replace the word "first" in an arraylist with the name of first player
 
 
             }
@@ -378,14 +384,16 @@ public class project {
             {
 
                 String key_1 = (String) key;
-                top_award_winners.set(1,key_1);   //replace the word "second" in an arrayList with the name of second player
+                if(!top_award_winners.contains(key_1)&&top_award_winners.contains("second")){
+                    top_award_winners.set(1,key_1); }  //replace the word "second" in an arrayList with the name of second player
 
             }
 
             if (map.get(key).equals(award_list.get(8)))  //search for third player
             {
                 String key_1 = (String) key;
-                top_award_winners.set(2,key_1);   //replace the word "third" in an arrayList with the name of third player
+                if(!top_award_winners.contains(key_1)&&top_award_winners.contains("third")){
+                    top_award_winners.set(2,key_1); }  //replace the word "third" in an arrayList with the name of third player
             }
         }
         return top_award_winners;   //return top 3 award winners
@@ -409,6 +417,7 @@ public class project {
             map.put((String) player,practiceHours);}  //link name with practice hours in a hashmap
 
         return map;}
+
 
     /**
      *
@@ -537,7 +546,3 @@ public class project {
         ArrayList playersName=addPlayersName(team);
         System.out.println(playersName);    //printing names of all the 11 players
         usersChoice(playersName);}}      //calling user's choice
-
-
-
-
