@@ -546,4 +546,4 @@ public class project {
         ArrayList playersName=addPlayersName(team);
         System.out.println(playersName);    //printing names of all the 11 players
         usersChoice(playersName);}}      //calling user's choice
-/// code is done
+/// code is done for demo 1
