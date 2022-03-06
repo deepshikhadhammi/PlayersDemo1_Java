@@ -2,13 +2,15 @@
 //PARTNER NAME -DEEPSHIKHA DHAMMI
 //TA NAME-SARTHAK SHARAN
 //TUTORIAL-T03
+
 import java.util.*;
 
 public class project {
-    public static ArrayList<Integer> list=new ArrayList<Integer>();
-    static Integer Highest=10;
-     static Integer secondHighest=9;
-     static Integer thirdHighest=8;
+    private static ArrayList<Integer> list=new ArrayList<Integer>();
+    private static Integer Highest=10;
+    private static Integer secondHighest=9;
+    private static Integer thirdHighest=8;
+
     public static ArrayList createTeam()   //function to create a cricket team
     {
         ArrayList team;
@@ -26,7 +28,7 @@ public class project {
 
         System.out.println("There are 11 players in a cricket Team(All names are expected to be unique names) ");
         int i = 1;
-
+// total players in team are 11
         while (i < 12) {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter Players Name");
