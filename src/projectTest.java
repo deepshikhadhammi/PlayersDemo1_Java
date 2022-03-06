@@ -182,5 +182,5 @@ class projectTest {
         assertEquals(expected, actual);   //check if the expected output matches the actual code
     }
 }
-// TESTING DONE
+// TESTING is DONE
 
