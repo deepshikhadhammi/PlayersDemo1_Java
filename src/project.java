@@ -6,11 +6,11 @@ import java.util.*;
 
 public class project {
     public static ArrayList<Integer> list=new ArrayList<Integer>();
-
-
+    static Integer Highest=10;
+     static Integer secondHighest=9;
+     static Integer thirdHighest=8;
     public static ArrayList createTeam()   //function to create a cricket team
     {
-
         ArrayList team;
         team=new ArrayList();
 
@@ -202,7 +202,7 @@ public class project {
         for (Object key : key_set)      //loop to search for top 3 wicket takers
         {
 
-            if (map.get(key).equals(wicket_list.get(10))) //searches for the 1st player
+            if (map.get(key).equals(wicket_list.get(Highest))) //searches for the 1st player
             {
 
                 String key_1 = (String) key;
@@ -211,7 +211,7 @@ public class project {
 
 
             }
-            if (map.get(key).equals(wicket_list.get(9)))  //searches for the second player
+            if (map.get(key).equals(wicket_list.get(secondHighest)))  //searches for the second player
             {
 
                 String key_1 = (String) key;
@@ -220,7 +220,7 @@ public class project {
 
             }
 
-            if (map.get(key).equals(wicket_list.get(8)))//search for the third player
+            if (map.get(key).equals(wicket_list.get(thirdHighest)))//search for the third player
             {
                 String key_1 = (String) key;
                 if(!top_wicket_takers.contains(key_1)&&top_wicket_takers.contains("third")){
@@ -298,7 +298,7 @@ public class project {
 
         for (Object key : key_set) {
 
-            if (map.get(key).equals(highest_run_list.get(10)))  //search for first player
+            if (map.get(key).equals(highest_run_list.get(Highest)))  //search for first player
             {
 
                 String key_1 = (String) key;
@@ -306,7 +306,7 @@ public class project {
                     top_run_scorers.set(0,key_1);} //replace the word "first" in an arraylist with the name of first player
 
             }
-            if (map.get(key).equals(highest_run_list.get(9))) {// search for second player
+            if (map.get(key).equals(highest_run_list.get(secondHighest))) {// search for second player
 
                 String key_1 = (String) key;
                 if(!top_run_scorers.contains(key_1)&&top_run_scorers.contains("second")){
@@ -314,7 +314,7 @@ public class project {
 
             }
 
-            if (map.get(key).equals(highest_run_list.get(8)))  //search for third player
+            if (map.get(key).equals(highest_run_list.get(thirdHighest)))  //search for third player
             {
                 String key_1 = (String) key;
                 if(!top_run_scorers.contains(key_1)&&top_run_scorers.contains("third")){
@@ -374,7 +374,7 @@ public class project {
 
         for (Object key : key_set) {
 
-            if (map.get(key).equals(award_list.get(10)))  //search for the first player
+            if (map.get(key).equals(award_list.get(Highest)))  //search for the first player
             {
 
                 String key_1 = (String) key;
@@ -383,7 +383,7 @@ public class project {
 
 
             }
-            if (map.get(key).equals(award_list.get(9)))  //search for the second player
+            if (map.get(key).equals(award_list.get(secondHighest)))  //search for the second player
             {
 
                 String key_1 = (String) key;
@@ -392,7 +392,7 @@ public class project {
 
             }
 
-            if (map.get(key).equals(award_list.get(8)))  //search for third player
+            if (map.get(key).equals(award_list.get(thirdHighest)))  //search for third player
             {
                 String key_1 = (String) key;
                 if(!top_award_winners.contains(key_1)&&top_award_winners.contains("third")){
